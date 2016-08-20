@@ -13,6 +13,6 @@ $(document).foundation();
 require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
-<ToDoApp/>,
-  document.getElementById('app')
+      <ToDoApp/>,
+      document.getElementById('app')
 );
