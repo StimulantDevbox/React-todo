@@ -1,0 +1,34 @@
+var React = require('react');
+
+var TodoSearch =React.createClass({
+
+  handleSearch: function () {
+    var showCompleted = this.Refs.showCompleted.checked;
+    var searchText = this.Refs.SearchText.value;
+
+    this.props.onSearch(showCompleted, searchText);
+  },
+
+
+
+  render: function() {
+    return (
+      <div>
+        <div>
+          <input type="search" ref="searchText" placeholder="Search Todos" onChange={this.handleSearch}/>
+        </div>
+        <div>
+          <label>
+            <input type="Checkbox" ref="showCompleted" onChange={this.handleSearch}/>
+            Show completed todos
+          </label>
+        </div>
+
+      </div>
+    )
+  }
+
+
+});
+
+module.exports = TodoSearch;
